@@ -1,0 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+
+# Datasets (too large)
+Car damaged parts dataset/
+dataset/
+
+# Training outputs
+training_output/
+inference_results/
+evaluation/
+dataset_analysis/
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Documentation
+*.md
+!README.md
+
+# Test results (optional - include if needed for demo)
+# test_results/
