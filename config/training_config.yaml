@@ -1,0 +1,68 @@
+# Car Damage Detection - Training Configuration
+
+# Model
+model:
+  size: "yolov8n-seg"  # Options: yolov8n-seg, yolov8s-seg, yolov8m-seg, yolov8l-seg, yolov8x-seg
+  pretrained: true
+
+# Training
+training:
+  epochs: 100
+  batch_size: 16
+  image_size: 640
+  patience: 20
+  device: "auto"  # auto, cpu, 0, 0,1,2,3
+  workers: 8
+  cache: false
+  seed: 42
+
+# Optimization
+optimizer:
+  type: "AdamW"
+  lr0: 0.001          # Initial learning rate
+  lrf: 0.01           # Final learning rate factor
+  momentum: 0.937
+  weight_decay: 0.0005
+  warmup_epochs: 3.0
+  warmup_momentum: 0.8
+  warmup_bias_lr: 0.1
+
+# Loss weights
+loss:
+  box: 7.5
+  cls: 0.5
+  dfl: 1.5
+
+# Data Augmentation
+augmentation:
+  hsv_h: 0.015        # Hue
+  hsv_s: 0.7          # Saturation
+  hsv_v: 0.4          # Value
+  degrees: 10.0       # Rotation
+  translate: 0.1      # Translation
+  scale: 0.5          # Scale
+  shear: 0.0          # Shear
+  perspective: 0.0    # Perspective
+  flipud: 0.0         # Flip up-down
+  fliplr: 0.5         # Flip left-right
+  mosaic: 1.0         # Mosaic augmentation
+  mixup: 0.1          # Mixup augmentation
+  copy_paste: 0.1     # Copy-paste augmentation
+
+# Validation
+validation:
+  save_period: 10     # Save checkpoint every N epochs
+  plots: true         # Generate plots
+  verbose: true       # Verbose output
+
+# Inference
+inference:
+  conf_threshold: 0.25
+  iou_threshold: 0.45
+  max_detections: 300
+
+# Paths
+paths:
+  data_config: "config/dataset.yaml"
+  output_dir: "runs"
+  experiment_name: "damage_seg"

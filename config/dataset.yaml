@@ -1,0 +1,15 @@
+path: dataset
+train: images/train
+val: images/val
+test: images/test
+
+nc: 8
+names:
+  0: Broken part
+  1: Corrosion
+  2: Dent
+  3: Paint chip
+  4: Scratch
+  5: Missing part
+  6: Flaking
+  7: Cracked

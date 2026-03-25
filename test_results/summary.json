@@ -1,0 +1,227 @@
+[
+  {
+    "image": "Car damages 1061.png",
+    "detections": 4,
+    "damages": {
+      "CRITICAL": [
+        "Broken part",
+        "Broken part",
+        "Broken part"
+      ],
+      "MODERATE": [
+        "Dent"
+      ]
+    }
+  },
+  {
+    "image": "Car damages 1080.png",
+    "detections": 1,
+    "damages": {
+      "CRITICAL": [
+        "Broken part"
+      ]
+    }
+  },
+  {
+    "image": "Car damages 1083.png",
+    "detections": 1,
+    "damages": {
+      "CRITICAL": [
+        "Broken part"
+      ]
+    }
+  },
+  {
+    "image": "Car damages 1085.png",
+    "detections": 6,
+    "damages": {
+      "CRITICAL": [
+        "Missing part",
+        "Missing part",
+        "Broken part",
+        "Missing part",
+        "Broken part",
+        "Broken part"
+      ]
+    }
+  },
+  {
+    "image": "Car damages 1143.jpg",
+    "detections": 4,
+    "damages": {
+      "MODERATE": [
+        "Dent",
+        "Dent"
+      ],
+      "CRITICAL": [
+        "Broken part",
+        "Broken part"
+      ]
+    }
+  },
+  {
+    "image": "Car damages 1153.png",
+    "detections": 6,
+    "damages": {
+      "MODERATE": [
+        "Dent",
+        "Dent"
+      ],
+      "CRITICAL": [
+        "Broken part",
+        "Broken part",
+        "Missing part",
+        "Broken part"
+      ]
+    }
+  },
+  {
+    "image": "Car damages 1162.png",
+    "detections": 7,
+    "damages": {
+      "CRITICAL": [
+        "Missing part",
+        "Broken part",
+        "Broken part",
+        "Broken part",
+        "Broken part",
+        "Broken part"
+      ],
+      "MODERATE": [
+        "Dent"
+      ]
+    }
+  },
+  {
+    "image": "Car damages 1166.png",
+    "detections": 2,
+    "damages": {
+      "CRITICAL": [
+        "Broken part",
+        "Broken part"
+      ]
+    }
+  },
+  {
+    "image": "Car damages 1168.png",
+    "detections": 5,
+    "damages": {
+      "CRITICAL": [
+        "Broken part",
+        "Missing part",
+        "Missing part"
+      ],
+      "MODERATE": [
+        "Dent",
+        "Dent"
+      ]
+    }
+  },
+  {
+    "image": "Car damages 1174.png",
+    "detections": 1,
+    "damages": {
+      "CRITICAL": [
+        "Broken part"
+      ]
+    }
+  },
+  {
+    "image": "Car damages 1175.png",
+    "detections": 6,
+    "damages": {
+      "CRITICAL": [
+        "Broken part",
+        "Broken part",
+        "Broken part",
+        "Broken part",
+        "Broken part"
+      ],
+      "MODERATE": [
+        "Dent"
+      ]
+    }
+  },
+  {
+    "image": "Car damages 1182.png",
+    "detections": 4,
+    "damages": {
+      "CRITICAL": [
+        "Missing part",
+        "Broken part",
+        "Broken part",
+        "Broken part"
+      ]
+    }
+  },
+  {
+    "image": "Car damages 1187.png",
+    "detections": 6,
+    "damages": {
+      "CRITICAL": [
+        "Broken part",
+        "Broken part",
+        "Broken part",
+        "Broken part"
+      ],
+      "MODERATE": [
+        "Dent",
+        "Dent"
+      ]
+    }
+  },
+  {
+    "image": "Car damages 1191.png",
+    "detections": 5,
+    "damages": {
+      "SEVERE": [
+        "Cracked"
+      ],
+      "CRITICAL": [
+        "Broken part",
+        "Broken part",
+        "Broken part",
+        "Broken part"
+      ]
+    }
+  },
+  {
+    "image": "Car damages 1195.png",
+    "detections": 6,
+    "damages": {
+      "MODERATE": [
+        "Dent",
+        "Dent"
+      ],
+      "CRITICAL": [
+        "Broken part",
+        "Broken part",
+        "Broken part",
+        "Broken part"
+      ]
+    }
+  },
+  {
+    "image": "Car damages 1196.png",
+    "detections": 2,
+    "damages": {
+      "MINOR": [
+        "Scratch",
+        "Scratch"
+      ]
+    }
+  },
+  {
+    "image": "Car damages 1205.jpg",
+    "detections": 3,
+    "damages": {
+      "CRITICAL": [
+        "Broken part",
+        "Broken part"
+      ],
+      "SEVERE": [
+        "Cracked"
+      ]
+    }
+  }
+]

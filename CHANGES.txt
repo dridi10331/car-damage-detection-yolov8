@@ -1,0 +1,83 @@
+═══════════════════════════════════════════════════════════════
+  MODIFICATIONS - SORTIES DANS LE DOSSIER DU PROJET
+═══════════════════════════════════════════════════════════════
+
+✅ CHANGEMENTS EFFECTUÉS:
+
+1. scripts/train_seg.py
+   AVANT: PROJECT = "runs"
+   APRÈS: PROJECT = "training_output"
+   → Les sorties d'entraînement vont maintenant dans:
+     project/training_output/damage_seg/
+
+2. scripts/evaluate.py
+   AVANT: OUTPUT_DIR = Path("evaluation")
+   APRÈS: OUTPUT_DIR = Path("evaluation")
+   → Les résultats d'évaluation restent dans:
+     project/evaluation/
+
+3. scripts/inter.py
+   AVANT: OUTPUT_DIR = Path("results")
+   APRÈS: OUTPUT_DIR = Path("inference_results")
+   → Les résultats d'inférence vont maintenant dans:
+     project/inference_results/
+
+4. README.md
+   → Mis à jour avec les nouveaux emplacements
+
+5. .gitignore
+   → Mis à jour pour ignorer les nouveaux dossiers de sortie
+
+6. USAGE.txt
+   → Mis à jour avec les nouveaux chemins
+
+═══════════════════════════════════════════════════════════════
+
+📁 NOUVELLE STRUCTURE DES SORTIES:
+
+project/
+├── models/                    ← Modèles entraînés (déjà présent)
+│   ├── best.pt
+│   └── last.pt
+│
+├── training_output/           ← NOUVEAU! Sorties d'entraînement
+│   └── damage_seg/
+│       ├── weights/
+│       │   ├── best.pt
+│       │   ├── last.pt
+│       │   └── epoch*.pt
+│       ├── results.csv
+│       └── *.png
+│
+├── evaluation/                ← Résultats d'évaluation
+│   ├── evaluation_report.json
+│   └── per_class_metrics.csv
+│
+└── inference_results/         ← NOUVEAU! Résultats d'inférence
+    ├── images/
+    ├── json/
+    └── summary.json
+
+═══════════════════════════════════════════════════════════════
+
+⚠️ IMPORTANT:
+
+- Toutes les sorties sont maintenant dans le dossier du projet
+- Plus besoin d'aller dans C:\Users\omard\runs\
+- Les anciens fichiers dans C:\Users\omard\runs\ restent intacts
+- Vous pouvez les supprimer si vous voulez libérer de l'espace
+
+═══════════════════════════════════════════════════════════════
+
+🧪 POUR TESTER:
+
+1. Entraînement (crée training_output/):
+   python scripts/train_seg.py
+
+2. Évaluation (crée evaluation/):
+   python scripts/evaluate.py
+
+3. Inférence (crée inference_results/):
+   python scripts/inter.py
+
+═══════════════════════════════════════════════════════════════
