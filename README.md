@@ -2,9 +2,14 @@
 
 YOLOv8-based instance segmentation system for automated vehicle damage detection and classification.
 
+[![Live Demo](https://img.shields.io/badge/🤗%20Hugging%20Face-Live%20Demo-blue)](https://huggingface.co/spaces/ahmedomar10/car-damage-detection)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black)](https://github.com/dridi10331/car-damage-detection-yolov8)
+
 ## Overview
 
 This system detects and segments 8 types of car damage with automatic severity assessment. Built on YOLOv8n-seg, it achieves 44% mAP on critical damage classes (missing/broken parts) with 57ms inference time on CPU.
+
+**🚀 [Try the Live Demo on Hugging Face Spaces](https://huggingface.co/spaces/ahmedomar10/car-damage-detection)**
 
 **Key Features:**
 - Instance segmentation with pixel-level masks
@@ -29,6 +34,37 @@ python scripts/evaluate.py
 
 # Run inference
 python scripts/inter.py
+```
+
+### API Usage
+
+```bash
+# Start API server
+python -m uvicorn api.main:app --host 0.0.0.0 --port 8000
+
+# Test API
+python test_api.py
+
+# Access API docs
+open http://localhost:8000/docs
+```
+
+### Docker Deployment
+
+```bash
+# Build and run
+docker-compose up --build
+
+# Access API at http://localhost:8000
+```
+
+### Gradio Demo
+
+```bash
+# Run Gradio app
+python app.py
+
+# Access at http://localhost:7860
 ```
 
 ## Project Structure
@@ -273,6 +309,68 @@ training_output/damage_seg/
   framework = {YOLOv8, Ultralytics}
 }
 ```
+
+## API Documentation
+
+### Endpoints
+
+**GET /** - Root endpoint
+```bash
+curl http://localhost:8000/
+```
+
+**GET /health** - Health check
+```bash
+curl http://localhost:8000/health
+```
+
+**POST /predict** - Detect damage
+```bash
+curl -X POST "http://localhost:8000/predict" \
+  -F "file=@image.jpg" \
+  -F "conf_threshold=0.25" \
+  -F "iou_threshold=0.45"
+```
+
+**GET /model/info** - Model information
+```bash
+curl http://localhost:8000/model/info
+```
+
+### Response Format
+
+```json
+{
+  "success": true,
+  "filename": "car.jpg",
+  "detections": [
+    {
+      "id": 1,
+      "class": "Broken part",
+      "confidence": 0.85,
+      "severity": "CRITICAL",
+      "bbox": {"x1": 100, "y1": 200, "x2": 300, "y2": 400}
+    }
+  ],
+  "summary": {
+    "total_damages": 1,
+    "by_severity": {"CRITICAL": 1, "SEVERE": 0, "MODERATE": 0, "MINOR": 0},
+    "has_critical_damage": true
+  }
+}
+```
+
+### Interactive API Docs
+
+Access Swagger UI at: `http://localhost:8000/docs`
+
+## Deployment
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions:
+- Local development
+- Docker deployment
+- Hugging Face Spaces
+- Railway / Render
 
 ## License
 
